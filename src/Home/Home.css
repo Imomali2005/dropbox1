@@ -1,0 +1,128 @@
+.container {
+    height: 100%;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.header {
+    width: 100%;
+    height: 25%;
+    z-index: 10;
+}
+
+.content {
+    width: 100%;
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.sidebar {
+    width: 10%;
+    display: block;
+}
+
+.sidebar.buttons{
+  width: 20%;
+}
+
+.mainArea {
+    width : 80%;
+    height: 100%;
+    background-color: white;
+}
+
+
+.image-top {
+    position: relative;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+}
+
+.imageTop-Span {
+    width: 90%;
+    height: 23px;
+    background: rgb(16,132,192);
+    background: linear-gradient(260deg, rgba(16,132,192,1) 27%, rgba(16,107,172,1) 100%);  
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+.imageTop {
+    position: absolute;
+    top: -12px;
+    right: -20px;
+    width: 400px;
+    height: auto;
+} 
+
+.sidebar-dropdown {
+    display: none;
+}
+
+@media only screen and (max-height: 663px) {
+    .imageTop {
+        top: -30px;
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    .mainArea {
+        width : 100%;
+        position: relative;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar-dropdown {
+        display: block;
+        position: absolute;
+        right: 0px;
+        width: auto;
+        text-align: right;
+        top: 20px;
+    }
+
+    .sidebar-dropdown > button {
+        border: none;
+        background-color: transparent;
+        color: #106BAC;
+    }
+
+    .sb-dropdown {
+        display: none;
+    }
+
+    .sb-dropdown.active {
+        display: block;
+        background-color: rgb(255, 255, 255);
+        margin-top: 0px;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 5px 29px 1px rgba(0,0,0,0.33);
+        -moz-box-shadow: 0px 5px 29px 1px rgba(0,0,0,0.33);
+        box-shadow: 0px 5px 29px 1px rgba(0,0,0,0.33);
+    }
+
+}
+
+
+@media only screen and (max-width: 580px) { 
+    .imageTop {
+        left: -100px;
+    }
+
+    .imageTop-Span {
+        width: 110%;
+    }
+
+}
+
+

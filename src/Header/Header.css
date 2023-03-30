@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+.header-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.logo-search-container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 80%;
+}
+
+.logo-container {
+    width: 20%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.logo-header {
+    margin-top: 0px;
+    min-width: 70%;
+    max-width: 85%;
+}
+
+.search-box {
+    width: calc(60% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.username-logout {
+    width: calc(20% - 20px);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin-left: 20px;
+}
+
+.username {
+    color: orange;
+    font-weight: 700;
+    margin-top: 50px;
+}
+
+.username-span {
+    margin-left: 10px;
+    margin-right: 5px;
+    color: #106BAC;
+}
+
+.search-field {
+    display: flex;
+    width: 95%;
+    height: 30px;
+    padding: 0.5%;
+    border: 1px solid #ddd;
+    border-radius:25px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.search-input {
+    align-self: flex-start;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    top: 0px;
+    padding-left: 10px;
+}
+
+/*----------second row in the Header: path and logout button --------*/
+
+.path-logout-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 20%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.paths {
+    margin-left: 15px;
+}
+
+.header-path {
+    width: 82%;
+    text-align: left;
+}
+
+.header-path > nav {
+    color: #106BAC;
+    font-weight: 600;
+    font-size: 0.9em;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pathLink:hover {
+    cursor: pointer;
+    color:#1293D6;
+    text-decoration: underline;
+}
+
+.logout-button {
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #737373;
+    margin-top: 40px;
+    background-color: transparent;
+}
+
+.divider {
+    margin: 0 0px 0 15px;
+}
+
+.divider:hover {
+    text-decoration: none;
+    cursor: initial;
+}
+
+.logout-button:hover {
+    cursor: pointer;
+    color: rgb(255, 136, 0);
+}
+
+.pathLink{
+    text-decoration: none;
+    color: #737373;
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .logo-container {
+        display: none;
+    }
+    
+    .logo-header {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .logo-search-container {
+        position: relative;
+    }
+
+    .search-box {
+        width: calc(70% - 10px);
+        margin-left: 10px;
+    }
+
+    .search-field {
+        width: 100%;
+    }
+
+    .username-logout {
+        width: calc(30% - 20px);
+        margin-right: 0px;
+        text-align: right;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    .path-logout-container {
+        z-index: 1;
+    }
+}
+
+
+@media only screen and (max-width: 580px) { 
+    .search-box {
+        width: calc(100% - 10px);
+        margin-left: 0px;
+        order: 2;
+        height: auto;
+        margin-top: -40px;
+    }
+
+    .username-logout {
+        width: calc(100% - 20px);
+        margin-right: 0px;
+        text-align: right;
+        justify-content: flex-end;
+        height: auto;
+        order: 1;
+        margin-top: 30px;
+    }
+
+    .search-field {
+        margin-top: 0;
+    }
+
+    .username, .logout-button {
+        margin: 0;
+    }
+
+    .header-path {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        margin-top: -10px;
+
+    }
+    .pathLink {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-height: 663px) and  (max-width: 580px){ 
+    .username-logout {
+        margin-top: 20px;
+    }
+}
+
